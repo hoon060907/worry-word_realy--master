@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" type="text/css" href="/game.css">
+  <link rel="stylesheet" href="/gameheader.css">
+</head>
+
+<body>
+  <%- include('gameheader') %>
+    <div class="container">
+      <div class="clock" id="load">
+        <h2>TIME</h2>
+        <div class="timer">10s</div>
+      </div>
+      <div class="kuttu">
+        <div class="dummy block">
+          <h4 class="word">NULL</h4>
+          <p onmouseover="onmouse()">설명이 없습니다.</p>
+        </div>
+        <div class="first block">
+          <h3 class="word">NULL</h3>
+          <p onmouseover="onmouse()">설명이 없습니다.</p>
+        </div>
+        <div class="second block">
+          <h2 class="word">NULL</h2>
+          <p onmouseover="onmouse()">설명이 없습니다.</p>
+        </div>
+        <div class="current block">
+          <h1 class="word">NULL</h1>
+          <input type="text" id="word-input" class="input_kuttu" name="input">
+        </div>
+      </div>
+      <div class="users" id="score-out">
+
+      </div>
+    </div>
+    <div class="popup" id="popup">
+      <p>대기중입니다.</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script src="/game.js"></script>
+</body>
+</html>

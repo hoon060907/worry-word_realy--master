@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/background.css">
+    <link rel="stylesheet" type="text/css" href="/game.css">
+    <link rel="stylesheet" type="text/css" href="/gameheader.css">
+</head>
+<body>
+    <header>
+        <div class="before">
+            <p id="before" class="">NULL</p>
+        </div>
+        <div class="arrow">
+            <span class="arrow-next"></span>
+            <span class="arrow-next"></span>
+            <span class="arrow-next"></span>
+        </div>
+        <div class="now">
+            <p id="now">NULL</p>
+        </div>
+        <div class="arrow">
+            <span class="arrow-next"></span>
+            <span class="arrow-next"></span>
+            <span class="arrow-next"></span>
+        </div>
+        <div class="next">
+            <p id="next">NULL</p>
+        </div>
+    </header>
+    <div class="container">
+      <div id="score-out">
+        
+      </div>
+      <div id="word-out">
+        <div class="before2">
+          <div class="word">
+            <div><p>NULL</p></div>
+            <div>
+              <p>설명이 없습니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="before1">
+          <div class="word">
+            <div><p>NULL</p></div>
+            <div>
+                <p>설명이 없습니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="nower">
+          <div class="word">
+            <div><p>NULL</p></div>
+            <div>
+                        <input type="text" id="word-input" name="input" placeholder="단어를 입력하세요">
+            </div>
+        </div>
+        </div>
+      </div>
+      <div id="blank"></div>
+    </div>
+    <div id="load">
+      <p>5.00s</p>
+    </div>
+    <div class="popup" id="popup">
+      <p>대기중입니다.</p>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script src="/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/background.css">
+    <link rel="stylesheet" type="text/css" href="/index.css">
+    <link rel="stylesheet" type="text/css" href="/header.css">
+</head>
+<body>
+    <%- include('header') %>
+        <div class="content">
+            <div class="rooms">
+                <h1>rooms</h1>
+                <div class="roomlist" id="room-outbox">
+
+                </div>
+            </div>
+            <div class="right_section">
+                <div class="users">
+                    <h2>users</h2>
+                    <div class="userlist" id="useron-outbox">
+                        
+                    </div>
+                </div>
+                <div class="room_create">
+                    <div class="make_room">방 만들기</div>
+                    <form action="/make" id="form2" method="post">
+                        <input type="text" id="room-input" name="input" placeholder="방 번호 입력...">
+                        <button type="submit">확인</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <div><h4>유저 이름을 입력해주세요.</h4></div>
+                <form>
+                    <input type="text" id="user-input" name="text-input">
+            
+                    <button id="noRefreshButton">확인</button>
+                </form>
+            </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

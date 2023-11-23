@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=ZCOOL+KuaiLe&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ZCOOL KuaiLe', 'Nanum Gothic';
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup>p {
+    color: #FF94BA;
+    font-size: 3rem;
+    font: 'Noto Sans KR', sans-serif
+}
+
+
+
+body {
+    background-image: url('images/bgr.svg');
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    height: 90%;
+    width: 100%;
+}
+
+.clock {
+    position: fixed;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #FF99BD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 7px solid #000000;
+    color: #fff;
+    top: 13%;
+    left: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.timer {
+    text-align: center;
+    line-height: 24px;
+    margin-top: 5px;
+    background: #434343;
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    border: 5px solid #000;
+    font-size: 25px;
+}
+
+.kuttu {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 50px;
+    background: #FF94BA;
+    box-shadow: 3px 3px 5px;
+    border-radius: 10px;
+    overflow-y: hidden;
+}
+.block .word {
+    margin-bottom: 10px;
+}
+
+.dummy {
+    width: 30%;
+    height: 60px;
+    z-index: -3;
+    opacity: 0;
+}
+.dummyanim {
+    animation-duration: 1s;
+    animation-name: dummyanim;
+}
+
+@keyframes dummyanim {
+    from {
+        transform: translatey(120px);
+        width: 45%;
+        height: 70px;
+        opacity: 1;
+    }
+    to {
+        transform: none;
+    }
+}
+.dontshow {
+    opacity: 0;
+}
+.first {
+    opacity: 0;
+    width: 45%;
+    height: 70px;
+    z-index: -2;
+}
+.firstanim {
+    animation-duration: 1s;
+    animation-name: firstanim;
+}
+
+@keyframes firstanim {
+    from {
+        transform: translatey(120px);
+        width: 60%;
+        height: 80px;
+    }
+    to {
+        transform: none;
+    }
+}
+
+.second {
+    opacity: 0;
+    /* display: none; */
+    width: 60%;
+    height: 80px;
+    z-index: -1;
+}
+.secondanim {
+    animation-duration: 1s;
+    animation-name: secondanim;
+}
+
+@keyframes secondanim {
+    from {
+        transform: translatey(130px);
+        width: 75%;
+    }
+    to {
+        transform: none;
+    }
+}
+
+.current {
+    width: 75%;
+}
+
+.input_kuttu {
+    display: block;
+    margin-top: 5px;
+    width: 90%;
+    border: 3px solid black;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 25px;
+    text-align: center;
+    outline: none;
+    margin: 5px auto;
+}
+
+/* .right_section {
+} */
+
+#score-out {
+    width: 50%;
+    /* height: 30%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score {
+    margin-top: 30px;
+    /* margin-right: 5%;
+    margin-left: 5%; */
+    width: 40%;
+    background-color: #FFC2D7;
+    height: 45px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+b {
+    font-size: 25px;
+    line-height: 45px;
+    color: white;
+}
+
+.score>b:first-child {
+    position: absolute;
+    left: 10px;
+}
+
+.score>b:nth-child(2) {
+    position: absolute;
+    right: 10px;
+}
