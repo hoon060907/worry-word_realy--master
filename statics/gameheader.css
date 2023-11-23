@@ -12,6 +12,9 @@
 .before , .now , .next{
     width: 100px;
 }
+.now {
+    font-size: 50px;
+}
 .arrow-next:nth-child(3){
     right: 15px;
 }
